@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp">
+
+    <EditText
+        android:id="@+id/merchantVpa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="textEmailAddress"
+        android:hint="Merchant VPA"/>
+
+    <EditText
+        android:id="@+id/merchantName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="text"
+        android:hint="Merchant Name"/>
+
+    <EditText
+        android:id="@+id/orderAmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="numberDecimal"
+        android:hint="Order Amount"/>
+
+    <EditText
+        android:id="@+id/remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="text"
+        android:hint="Remark"/>
+
+    <Button
+        android:id="@+id/upiPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:text="UPI Pay"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/scanUpi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:text="Scan"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/createQRCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:text="Create QR Code"
+        android:textColor="#fff"/>
+
+</LinearLayout>
