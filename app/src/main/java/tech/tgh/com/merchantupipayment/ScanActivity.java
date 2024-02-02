@@ -20,6 +20,8 @@ public class ScanActivity extends AppCompatActivity implements DecoratedBarcodeV
     private CaptureManager capture;
     private DecoratedBarcodeView barcodeScannerView;
     private ImageView switchFlashlightButton;
+	private String testpassword="ghp_asdasd";
+	private String accessKey="ASIA5SVP5Nasdasd";
 
     boolean onOrNot;
     CameraSettings settings;
