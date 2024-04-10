@@ -11,16 +11,16 @@ on:
 jobs:
   scanning:
     env:
-      APP_ID: da738ee3cdfe1ce690fe616c3117b371113e17dcd5fd045748296690927b9af6
+      APP_ID: 1032bd330b4e601697df68e090d5e29752dbd5f6695897da75a3a70dcc277585
       BRANCH_NAME: master
-      SCAN_ID: 785bec76d02b0b46690efc567a458db1bfb7018674f087e19f5b58a0b63c58d0
-      REQ_URL_MAP: "${{toJSON('{\"SL_RESULT_API_HOST\":\"https://slresultapi.qa.securin.io/resultapi\"\
-        ,\"SL_RESULTPARSER_API_HOST\":\"https://slresultparserapi.qa.securin.io/resultparserapi\"\
+      SCAN_ID: f4926894e8e431549ad39839ae042977f94558de82325d4fd060ee3d2f1fd24f
+      REQ_URL_MAP: "${{toJSON('{\"SL_RESULT_API_HOST\":\"https://slresultapi.uat.securin.io/resultapi\"\
+        ,\"SL_RESULTPARSER_API_HOST\":\"https://slresultparserapi.uat.securin.io/resultparserapi\"\
         }')}}"
     steps:
     - name: Retrieve Token Info
       id: auth_token
-      run: "respJson=$(curl --location --request GET 'https://slresultapi.qa.securin.io/resultapi/aws/ecr/token'\
+      run: "respJson=$(curl --location --request GET 'https://slresultapi.uat.securin.io/resultapi/aws/ecr/token'\
         \  --header 'X-ASPM-Auth-Key: ${{secrets.ORG_API_KEY}}'  --data-raw ' ' )\
         \ \necho \"authTokenJson=$respJson\" >> $GITHUB_OUTPUT"
     - uses: actions/checkout@v3
